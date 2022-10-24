@@ -1,3 +1,497 @@
 body{
+    margin: 0;
+
     font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
 }
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+/* ===== Container ==== */
+
+.container{
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+}
+
+.container--team{
+    width: 100%;
+    max-width: 1070px;
+}
+
+/* ====== Header ====== */
+
+.header{
+  width: 100%;
+  height: 100px;
+  padding: 0 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__inner{
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #515369;
+}
+
+/* ====== Nav +==+++ */
+
+nav{
+    display: flex;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    margin-left: 50px;
+    text-decoration: none;
+    color: #fff;
+    opacity: .75;
+
+    transition: opacity .2s linear;
+}
+
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* ===== Intro ==== */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+
+    background: #31344e url("../img/intro.png") 
+    center no-repeat;
+    background-size: cover;
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title{
+    margin: 0 0 30px;
+    font-family: 'Open sans', sans-serif;
+    font-size: 65px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.intro__subtitle{
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    margin-bottom: 60px;
+}
+
+/* ===== Button ==== */
+
+.btn{
+  
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px;
+
+    border-radius: 2px;
+    border: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .2s linear;
+}
+
+.btn--red{
+    background-color: #e84545;
+}
+
+.btn--red:hover{
+    background-color: #9f1f3d;
+}
+
+
+.btn--long{
+    min-width: 280px;
+}
+/* ====== Features ===== */
+
+.features{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.features__item{
+    width: 400px;
+    max-width: 1170px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.features__icon{
+    margin-bottom: 30px;
+}
+
+.features__title{
+    font-size: 14px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.features__text{   
+    width: 350px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+ /* ======= Works ====== */
+
+ .works{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .works__item{
+    width: 25%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    border-right: 1px solid #fff;   
+ }
+
+ .work--mis{
+     border-right: 0.5px solid #fff;
+ }
+
+ .works__item:last-child{
+     border:0;
+ }
+
+
+ .works__item:hover .works__content{
+    opacity: 1;
+ }
+
+ .works__img{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     z-index: 2;
+
+     transform: translate3d(-50%, -50%, 0);
+ }
+
+ .works__content{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 100%;
+     height: 100%;
+
+     background-color: rgba(232, 69, 69, .9);
+     opacity: 0;
+     transition: opacity .2s linear;
+
+     position: absolute;
+     top: 0;
+     left: 0;
+    z-index: 2;
+    }
+
+    .works__title{
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .works__text{
+        font-size: 14px;
+        color: #fff;
+    }
+
+    /* ==== Team ===== */
+
+    .team{
+        margin: 100px 0 70px;
+    }
+
+    .team__inner{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .team__item{
+        width: 25%;
+        padding: 0 19px;
+        overflow: hidden;
+    }
+
+    .team__photo{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .team__name{
+        font-size: 22px;
+
+        color: #2d3033;
+        margin-bottom: 8px;
+    }
+
+    .team__prof{
+        font-size: 13px;
+        color: #e84545;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .team__text{
+        max-width: 270px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        color: #6c7279;
+    }
+
+    /* === Social ===== */
+
+    .social{
+        display: flex;
+    }
+
+    .team__social{
+        display: flex;
+    }
+
+    .social--footer{
+       justify-content: center;
+    }
+
+    .social__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+
+        border: 1px solid #e8ecee;
+    }
+
+    .social--footer .social__item{
+        background-color: transparent;
+        
+    }
+
+    /* ====== Reviews =======*/
+
+    .reviews{
+        overflow: hidden;
+        background-color: #53354a;
+    }
+
+    .reviews__item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .reviews__img{
+        width: 50%;
+        height: 500px;
+        position: relative;
+    }
+
+    .reviews__pht{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        height: 500px;
+
+        transform: translateY(-50%);
+    }
+
+    .reviews__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-left: 80px;
+
+        color: #fff;
+    }
+
+    .reviews__text{
+        font-family: 'Cardo',sans-serif;
+        font-style: italic;
+        font-size: 36px;
+        line-height: 1.2; 
+        
+        margin-bottom: 20px;
+    }
+
+    .reviews__author{
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color:crimson; 
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .circle{
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #53354a;
+    }
+
+    /* Download */
+
+    .download{
+        margin: 90px 0;
+
+        text-align: center;
+    }
+
+    .download__title{
+        margin-bottom: 7px;
+
+        font-size: 28px;
+        color: #2d3033;
+        font-weight: 300;
+
+    }
+
+    .download__text{
+        margin-bottom: 30px;
+
+        font-size: 13px;
+        color: #2d3033;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Footer */
+
+    .footer{
+        
+
+        background-color: #3a3e64;
+    }
+
+    .footer__inner{
+        padding: 70px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__block{
+        width: 33.3333%;
+
+        text-align: center;
+    }
+
+    .footer__title{
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+    }
+
+    .footer__address{
+        font-size: 14px;
+        line-height: 1.5;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__text{
+        max-width: 335px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Copyright */
+
+    .copyright{
+        padding: 20px 0;
+
+        background-color: #313445;
+
+    }
+
+    .copyright__text{
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #808080;
+    }
+
+    span{
+        color: #fff;
+    }
+
